@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portfolio of Ubejd Haziri - Front-End Developer & Web Designer"
+		/>
+		<title>Ubejd Haziri | Web Developer</title>
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon-16x16.png"
+		/>
+		<link rel="shortcut icon" href="./img/favicon.ico" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome for icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- GSAP -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="#hero">About Me</a>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero" id="hero">
+			<div class="hero-content">
+				<h1>Ubejd Haziri</h1>
+				<h2>Front-End Developer</h2>
+				<p>
+					I'm a self-taught front-end developer based in Kosovo, passionate
+					about crafting clean and engaging web interfaces. I enjoy blending
+					creativity with technology to build responsive and user-friendly
+					websites.
+				</p>
+				<a href="#projects">View My Work</a>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects">
+			<h2>Projects</h2>
+			<div class="projects">
+				<div class="project">
+					<h3>Lumina Creative</h3>
+					<p>
+						Modern responsive agency website built with clean layout and
+						mobile-first design.
+					</p>
+					<a href="https://luminacreative-ubi.netlify.app" target="_blank"
+						>Live Demo</a
+					>
+				</div>
+
+				<div class="project">
+					<h3>EdgeLedger</h3>
+					<p>
+						Business landing page built with semantic HTML, CSS Grid, and
+						Flexbox for responsiveness.
+					</p>
+					<a href="https://edgeledger-ubi.netlify.app" target="_blank"
+						>Live Demo</a
+					>
+				</div>
+
+				<div class="project">
+					<h3>Countries Explorer</h3>
+					<p>
+						Web app that fetches country data via REST API, with search, filter,
+						and dark mode features.
+					</p>
+					<a href="https://countrieswebsite-ubi.netlify.app" target="_blank"
+						>Live Demo</a
+					>
+				</div>
+				<div class="project">
+					<h3>Testimonials Showcase</h3>
+					<p>
+						Interactive testimonials page built to showcase client feedback in a
+						dynamic, responsive layout using CSS Grid.
+					</p>
+					<a href="https://testimonials-ubi.netlify.app/" target="_blank"
+						>Live Demo</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section id="skills">
+			<h2>Skills</h2>
+			<div class="skills">
+				<div class="skills-list">
+					<span>HTML5</span>
+					<span>CSS3</span>
+					<span>JavaScript (ES6)</span>
+					<span>Responsive Design</span>
+					<span>Git & GitHub</span>
+					<span>Postman</span>
+					<span>API Integration</span>
+					<span>VS Code</span>
+					<span>CLI</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact">
+			<h2>Contact</h2>
+			<div class="contact-container">
+				<!-- Left Side -->
+				<div class="contact-left">
+					<p>
+						Interested in working together?
+						<br />
+						Feel free to reach out through any of the channels below
+					</p>
+
+					<div class="contact-details">
+						<div class="detail">
+							<i class="fas fa-envelope"></i>
+							<a href="mailto:haziri.ubejd@gmail.com">haziri.ubejd@gmail.com</a>
+						</div>
+						<div class="detail">
+							<i class="fas fa-phone-alt"></i>
+							<a href="tel:+38345413132">+383 45 413 132</a>
+						</div>
+						<div class="detail">
+							<i class="fas fa-map-marker-alt"></i>
+							<span>Prishtina, Kosovo</span>
+						</div>
+					</div>
+
+					<div class="social-links">
+						<a href="https://github.com/ubejd05" target="_blank"
+							><i class="fab fa-github"></i
+						></a>
+						<a
+							href="https://www.linkedin.com/in/ubejd-haziri-2a9755213/"
+							target="_blank"
+							><i class="fab fa-linkedin"></i
+						></a>
+						<a href="https://wa.me/38345413132" target="_blank"
+							><i class="fab fa-whatsapp"></i
+						></a>
+					</div>
+				</div>
+
+				<!-- Right Side -->
+				<div class="contact-right">
+					<form
+						class="contact-form"
+						action="https://formspree.io/f/xeovjnvn"
+						method="POST"
+					>
+						<input type="text" name="name" placeholder="Your Name" required />
+						<input
+							type="email"
+							name="email"
+							placeholder="Your Email"
+							required
+						/>
+						<textarea
+							name="message"
+							rows="5"
+							placeholder="Your Message"
+							required
+						></textarea>
+						<button type="submit">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>© 2025 Ubejd Haziri</p>
+		</footer>
+
+		<script>
+			// Simple GSAP animation
+			gsap.from('header', { y: -100, opacity: 0, duration: 1 });
+			gsap.from('.hero-content h1', { opacity: 0, y: 30, duration: 1 });
+			gsap.from('.hero-content h2', { opacity: 0, y: 30, delay: 0.3 });
+			gsap.from('.hero-content p', { opacity: 0, y: 30, delay: 0.6 });
+			gsap.from('.hero-content a', { opacity: 0, y: 30, delay: 0.9 });
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const form = document.querySelector('.contact-form');
+
+				form.addEventListener('submit', (e) => {
+					// add delay to allow formspree to process the submission
+					setTimeout(() => {
+						form.reset(); // Clear all fields after submission
+					}, 500);
+				});
+			});
+		</script>
+	</body>
+</html>

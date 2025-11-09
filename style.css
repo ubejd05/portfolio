@@ -1,0 +1,383 @@
+:root {
+	--primary: #00c2ff;
+	--dark: #1a1a1a;
+	--light: #ffffff;
+	--gray: #888;
+	--max-width: 1100px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--dark);
+	color: var(--light);
+	line-height: 1.6;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	background: rgba(26, 26, 26, 0.7);
+	padding: 1.2rem 0;
+	text-align: center;
+	border-bottom: 1px solid #222;
+}
+
+header h1 {
+	font-size: 2rem;
+	color: var(--primary);
+}
+
+header p {
+	color: var(--gray);
+	font-size: 1rem;
+}
+
+nav {
+	margin-top: 0.5rem;
+}
+
+nav a {
+	position: relative;
+	color: var(--light);
+	text-decoration: none;
+	margin: 0 10px;
+	font-weight: 500;
+	transition: color 0.3s;
+	padding-bottom: 3px;
+}
+
+nav a::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: center;
+	width: 100%;
+	height: 2px;
+	background: var(--primary);
+	transition: transform 0.3s ease;
+}
+
+nav a:hover {
+	color: var(--primary);
+}
+
+nav a:hover::after {
+	transform: translateX(-50%) scaleX(1);
+}
+
+section {
+	max-width: var(--max-width);
+	margin: 0 auto 4rem;
+	padding: 0 1rem;
+	scroll-margin-top: 10vh; /* Adjust for fixed header */
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	color: var(--primary);
+	font-size: 2rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Hero Section */
+.hero {
+	height: 100vh;
+	min-width: 100% !important;
+	/* margin: 0; */
+	background: url('./img/hero-img.jpg') center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+}
+
+.hero::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+	max-width: 700px;
+	padding: 2rem;
+}
+
+.hero-content h1 {
+	font-size: 3rem;
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+	color: #eee;
+	margin-bottom: 1rem;
+}
+
+.hero-content p {
+	font-size: 1.1rem;
+	color: #ccc;
+	margin-bottom: 2rem;
+}
+
+.hero-content a {
+	background: var(--primary);
+	color: var(--light);
+	text-decoration: none;
+	padding: 0.75rem 1.5rem;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: background 0.3s;
+}
+
+.hero-content a:hover {
+	background: #009ad0;
+}
+
+/* Projects */
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.project {
+	background: #222;
+	padding: 1.5rem;
+	border-radius: 15px;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project h3 {
+	margin-bottom: 0.5rem;
+	color: var(--primary);
+}
+
+.project p {
+	color: #ccc;
+	font-size: 0.95rem;
+	margin-bottom: 1rem;
+}
+
+.project a {
+	color: var(--light);
+	text-decoration: none;
+	background: var(--primary);
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	transition: background 0.3s;
+}
+
+.project a:hover {
+	background: #00a5d9;
+}
+
+/* Skills */
+.skills {
+	text-align: center;
+	max-width: 900px !important;
+	margin: 0 auto 4rem;
+}
+
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+.skills-list span {
+	background: #222;
+	padding: 0.6rem 1rem;
+	border-radius: 20px;
+	font-size: 0.9rem;
+	color: #ddd;
+}
+
+/* Contact */
+#contact {
+	padding: 1rem;
+	text-align: center;
+	/* background: linear-gradient(180deg, #0b0c10 0%, #0f2027 100%); */
+	color: #fff;
+}
+
+.contact-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3rem;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(12px);
+	border-radius: 20px;
+	padding: 2.5rem;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-left,
+.contact-right {
+	flex: 1 1 380px;
+}
+
+.contact-left p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #ddd;
+	margin-bottom: 1.8rem;
+}
+
+.contact-details {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	align-items: flex-start;
+}
+
+.detail {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	color: #ccc;
+}
+
+.detail i {
+	color: var(--primary);
+	font-size: 1.2rem;
+}
+
+.detail a {
+	color: #ddd;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.detail a:hover {
+	color: var(--primary);
+}
+
+.social-links {
+	display: flex;
+	gap: 1.2rem;
+	margin-top: 1rem;
+}
+
+.social-links a {
+	color: #fff;
+	font-size: 1.8rem;
+	transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+	color: var(--primary);
+	transform: scale(1.15);
+}
+
+/* Contact Form */
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+	color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	outline: 2px solid var(--primary);
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-form button {
+	background: var(--primary);
+	border: none;
+	color: #fff;
+	font-weight: 600;
+	padding: 1rem;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+	background: #00a3d7;
+	transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.contact-container {
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.contact-left,
+	.contact-right {
+		flex: 1 1 100%;
+	}
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 1rem;
+	background: #111;
+	color: #777;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+	header h1 {
+		font-size: 1.6rem;
+	}
+
+	.hero-content h1 {
+		font-size: 2.2rem;
+	}
+
+	.hero-content p {
+		font-size: 1rem;
+	}
+}
