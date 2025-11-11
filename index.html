@@ -269,49 +269,6 @@
 			<p>© 2025 Ubejd Haziri</p>
 		</footer>
 
-		<script>
-			// Simple GSAP animation
-			gsap.from('header', { y: -100, opacity: 0, duration: 1 });
-			gsap.from('.hero-content h1', { opacity: 0, y: 30, duration: 1 });
-			gsap.from('.hero-content h2', { opacity: 0, y: 30, delay: 0.3 });
-			gsap.from('.hero-content p', { opacity: 0, y: 30, delay: 0.6 });
-			gsap.from('.hero-content a', { opacity: 0, y: 30, delay: 0.9 });
-		</script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const form = document.querySelector('.contact-form');
-
-				form.addEventListener('submit', (e) => {
-					// add delay to allow formspree to process the submission
-					setTimeout(() => {
-						form.reset(); // Clear all fields after submission
-					}, 500);
-				});
-			});
-		</script>
-
-		<script>
-			const sections = document.querySelectorAll('section');
-			const navLinks = document.querySelectorAll('nav a');
-
-			window.addEventListener('scroll', () => {
-				let currentSection = '';
-
-				sections.forEach((section) => {
-					const sectionTop = section.offsetTop - 70; // adjust for fixed header height
-					const sectionHeight = section.offsetHeight;
-					if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-						currentSection = section.getAttribute('id');
-					}
-				});
-
-				navLinks.forEach((link) => {
-					link.classList.remove('active');
-					if (link.getAttribute('href') === '#' + currentSection) {
-						link.classList.add('active');
-					}
-				});
-			});
-		</script>
+		<script src="main.js"></script>
 	</body>
 </html>
