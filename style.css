@@ -77,6 +77,10 @@ nav a:hover::after {
 	transform: translateX(-50%) scaleX(1);
 }
 
+nav a.active::after {
+	transform: translateX(-50%) scaleX(1);
+}
+
 section {
 	max-width: var(--max-width);
 	margin: 0 auto 4rem;

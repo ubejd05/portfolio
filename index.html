@@ -48,7 +48,7 @@
 	<body>
 		<header>
 			<nav>
-				<a href="#hero">About Me</a>
+				<a href="#hero" class="active">About Me</a>
 				<a href="#projects">Projects</a>
 				<a href="#skills">Skills</a>
 				<a href="#contact">Contact</a>
@@ -286,6 +286,30 @@
 					setTimeout(() => {
 						form.reset(); // Clear all fields after submission
 					}, 500);
+				});
+			});
+		</script>
+
+		<script>
+			const sections = document.querySelectorAll('section');
+			const navLinks = document.querySelectorAll('nav a');
+
+			window.addEventListener('scroll', () => {
+				let currentSection = '';
+
+				sections.forEach((section) => {
+					const sectionTop = section.offsetTop - 70; // adjust for fixed header height
+					const sectionHeight = section.offsetHeight;
+					if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+						currentSection = section.getAttribute('id');
+					}
+				});
+
+				navLinks.forEach((link) => {
+					link.classList.remove('active');
+					if (link.getAttribute('href') === '#' + currentSection) {
+						link.classList.add('active');
+					}
 				});
 			});
 		</script>
