@@ -196,6 +196,50 @@ img {
 .project a:hover {
 	background: #00a5d9;
 }
+.project-thumb {
+	width: 100%;
+	height: 160px;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.project-thumb::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: inherit; /* take the inline style URL */
+	background-size: cover; /* cover entire pseudo-element */
+	background-position: center; /* center image */
+	background-repeat: no-repeat; /* no repeating */
+	z-index: 0;
+	transition: transform 0.5s ease;
+}
+
+.project-thumb::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4); /* dark overlay */
+	border-radius: 10px;
+	z-index: 1;
+	transition: background 0.5s ease;
+}
+
+.project:hover .project-thumb::before {
+	transform: scale(1.05); /* smooth zoom */
+}
+
+.project:hover .project-thumb::after {
+	background: rgba(0, 0, 0, 0.2); /* lighten overlay on hover */
+}
 
 /* Skills */
 .skills {
