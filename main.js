@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const sections = document.querySelectorAll('section');
 	const navLinks = document.querySelectorAll('nav a');
 
+	let scrolledByClick = false;
+
 	// Dynamically get header height (works with vh units)
 	function getHeaderHeight() {
 		return header ? header.getBoundingClientRect().height : 0;
@@ -48,23 +50,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	// ---- CLICK HANDLER ----
 	navLinks.forEach((link) => {
 		link.addEventListener('click', (e) => {
-			// Remove "active" from all links
+			scrolledByClick = true;
 			navLinks.forEach((link) => link.classList.remove('active'));
-			// Delay adding "active" to allow scroll animation to complete
+			link.classList.add('active');
 			setTimeout(() => {
-				// Add "active" to the clicked one
-				link.classList.add('active');
+				scrolledByClick = false;
 			}, 1000);
 		});
 	});
 
 	// ---- SCROLL SPY ----
 	window.addEventListener('scroll', () => {
+		if (scrolledByClick) return;
 		let currentSection = '';
 		const headerHeight = getHeaderHeight();
 
 		sections.forEach((section) => {
-			const sectionTop = section.offsetTop - headerHeight - 5;
+			const sectionTop = section.offsetTop - headerHeight - 100;
 			const sectionHeight = section.offsetHeight;
 			if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
 				currentSection = section.getAttribute('id');
