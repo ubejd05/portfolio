@@ -170,6 +170,9 @@ img {
 	padding: 1.5rem;
 	border-radius: 15px;
 	transition: transform 0.3s, box-shadow 0.3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .project:hover {
@@ -195,6 +198,7 @@ img {
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	transition: background 0.3s;
+	width: fit-content;
 }
 
 .project a:hover {
