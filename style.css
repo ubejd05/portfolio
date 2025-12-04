@@ -3,7 +3,7 @@
 	--dark: #1a1a1a;
 	--light: #ffffff;
 	--gray: #888;
-	--max-width: 1100px;
+	--max-width: 1170px;
 }
 
 * {
@@ -224,24 +224,6 @@ img {
 .project-links .code-btn:hover {
 	background: var(--primary);
 }
-
-/* 
-.project-links {
-	display: flex;
-	gap: 0.7rem;
-}
-
-.code-btn {
-	background: transparent !important;
-	border: 2px solid var(--primary) !important;
-	color: var(--primary) !important;
-	transition: background 0.3s, color 0.3s !important;
-}
-
-.code-btn:hover {
-	background: var(--primary) !important;
-	color: var(--light) !important;
-} */
 
 .project-thumb {
 	width: 100%;
